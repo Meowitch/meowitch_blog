@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <img src="https://i.gifer.com/origin/d6/d66620ccdb4aee4182879a2c07d393ef_w200.gif"> </img>
+</body>
+</html>
+
+<header>
+    <h1><a href="/">Meowitch's Blog</a></h1>
+</header>
+
+{% for post in posts %}
+    <article>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+{% endfor %}
